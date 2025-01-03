@@ -1,10 +1,11 @@
 ---
-import Footer from "../components/Astro/Footer.astro";
-import Header from "../components/Astro/Header.astro";
-import Hero from "../components/Astro/Hero.astro";
-import Services from "../components/Astro/Services.astro";
+import ChooseUs from "../components/Astro/Sections/ChooseUs.astro";
+import Footer from "../components/Astro/Layout/Footer.astro";
+import Header from "../components/Astro/Layout/Header.astro";
+import Hero from "../components/Astro/Sections/Hero.astro";
+import Services from "../components/Astro/Sections/Services.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/globals.css";
+import "../assets/styles/globals.css";
 ---
 
 <Layout>
@@ -13,7 +14,11 @@ import "../styles/globals.css";
         <main>
             <Hero />
             <Services />
+            <ChooseUs />
         </main>
         <Footer />
     </div>
 </Layout>
+
+<script src="/src/assets/scripts/scroll.js"></script>
+<script src="/src/assets/scripts/smooth-scroll.js"></script>

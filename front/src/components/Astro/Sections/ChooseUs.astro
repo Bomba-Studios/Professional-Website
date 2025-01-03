@@ -1,0 +1,66 @@
+---
+import {
+    TechIcon,
+    SecurityIcon,
+    DeliveryIcon,
+    SupportIcon,
+} from "../../assets/Icons";
+export const features = [
+    {
+        title: "Tecnología Moderna",
+        description:
+            "Utilizamos las últimas tecnologías y mejores prácticas para crear sitios web rápidos y seguros.",
+        icon: TechIcon,
+    },
+    {
+        title: "Seguridad Garantizada",
+        description:
+            "Implementamos las mejores prácticas de seguridad para proteger tu sitio web y tus datos.",
+        icon: SecurityIcon,
+    },
+    {
+        title: "Entregas Puntuales",
+        description:
+            "Nos comprometemos a entregar tu proyecto en el tiempo acordado, sin retrasos.",
+        icon: DeliveryIcon,
+    },
+    {
+        title: "Soporte Dedicado",
+        description:
+            "Brindamos acompañamiento continuo durante y después del desarrollo de tu proyecto.",
+        icon: SupportIcon,
+    },
+];
+---
+
+<section class="py-16 bg-gray-50" id="why-choose-us">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                ¿Por qué elegirnos?
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+                Nos destacamos por ofrecer soluciones web innovadoras y
+                personalizadas
+            </p>
+        </div>
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {
+                features.map((feature) => (
+                    <div class="relative group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="p-3 bg-primary-50 rounded-lg mb-4">
+                                <feature.icon />
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                {feature.title}
+                            </h3>
+                            <p class="text-gray-600">{feature.description}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
