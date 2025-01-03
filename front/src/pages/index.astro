@@ -1,12 +1,17 @@
 ---
+import Footer from "../components/Astro/Footer.astro";
 import Header from "../components/Astro/Header.astro";
 import Hero from "../components/Astro/Hero.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
 ---
 
-<div class="min-h-screen bg-white">
-    <Header />
-    <main>
-        <Hero />
-    </main>
-</div>
+<Layout>
+    <div class="min-h-screen bg-white">
+        <Header />
+        <main>
+            <Hero />
+        </main>
+        <Footer />
+    </div>
+</Layout>
