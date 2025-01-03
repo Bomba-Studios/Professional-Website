@@ -3,33 +3,69 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      @apply bg-slate-50;
-    }
+  html {
+    scroll-behavior: smooth;
   }
-  
-  @layer components {
-    .gradient-text {
-      @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
-    }
-    
-    .btn-primary {
-      @apply inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
-    }
 
-    .btn-link {
-        @apply text-slate-600 font-medium transition-colors hover:text-primary-600 ;
-    }
-  
-    .section-title {
-      @apply text-4xl md:text-5xl font-bold tracking-tight;
-    }
-  
-    .card-hover {
-      @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-    }
+  body {
+    @apply bg-slate-50;
   }
+}
+
+summary {
+  display: block;
+  /* works in firefox */
+  list-style: none;
+  /* works in firefox */
+}
+
+summary::after {
+  display: block;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Estilo para el ícono */
+details summary .toggle-icon::after {
+  content: '+';
+  transition: transform 0.3s ease;
+}
+
+/* Cambia el ícono cuando el details está abierto */
+details[open] summary .toggle-icon::after {
+  content: '-';
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  .btn-link {
+    @apply text-slate-600 font-medium transition-colors hover:text-primary-600;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
