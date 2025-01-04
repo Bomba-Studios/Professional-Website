@@ -12,6 +12,8 @@
     "@astrojs/solid-js": "^5.0.1",
     "@astrojs/tailwind": "^5.1.4",
     "@emailjs/browser": "^4.4.1",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "astro": "^5.1.2",
     "solid-js": "^1.9.3",
     "solid-toast": "^0.5.0",
