@@ -1,0 +1,163 @@
+---
+import {
+    LocationIcon,
+    CalendarIcon,
+    MailIcon,
+    PhoneIcon,
+    InstagramIcon,
+    LinkedInIcon,
+    WhatsappIcon,
+} from "../assets/Icons";
+
+const contactDetails = [
+    { icon: MailIcon, label: "Email", value: "yonkitas9@gmail.com" },
+    { icon: PhoneIcon, label: "Teléfono", value: "+57 (301) 570-3750" },
+    { icon: LocationIcon, label: "Ubicación", value: "Soacha, Colombia" },
+    { icon: CalendarIcon, label: "Horario", value: "Lun-Vie: 9:00 a.m - 18:00 p.m" },
+];
+
+const formFields = [
+    {
+        label: "Nombre",
+        name: "name",
+        type: "text",
+        placeholder: "¿Cómo te llamas?*",
+        required: true,
+    },
+    {
+        label: "Email",
+        name: "email",
+        type: "email",
+        placeholder: "tu@email.com*",
+        required: true,
+    },
+    {
+        label: "Teléfono",
+        name: "phone",
+        type: "tel",
+        placeholder: "WhatsApp o teléfono (opcional)",
+    },
+];
+---
+
+<section class="relative py-16 sm:py-24 overflow-hidden" id="contact-us">
+    <div class="absolute inset-0 opacity-30">
+        <div
+            class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary-400/30 to-purple-400/30 rounded-full blur-3xl"
+        >
+        </div>
+        <div
+            class="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-tr from-indigo-400/30 to-primary-400/30 rounded-full blur-3xl"
+        >
+        </div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">
+                ¡Hablemos sobre tu <span class="gradient-text"
+                    >próximo proyecto!</span
+                >
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+                Estamos listos para hacer realidad tu visión digital
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
+            <!-- Columna del formulario -->
+            <div class="rounded-xl">
+                <div class="w-full">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {
+                                formFields.map((field, index) => (
+                                    <div
+                                        class:list={{
+                                            "sm:col-span-2": index === 2,
+                                        }}
+                                        key={field.name}
+                                    >
+                                        <input
+                                            type={field.type}
+                                            name={field.name}
+                                            id={field.name}
+                                            required={field.required}
+                                            placeholder={field.placeholder}
+                                            class="form-input w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 transition-colors"
+                                        />
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                        <div>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                rows={8}
+                                placeholder="Cuéntanos sobre tu proyecto..."
+                                class="w-full px-4 py-3 rounded-xl bg-gray-100 font-medium"
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn-primary py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center"
+                        >
+                            <span> Enviar Mensaje &rarr; </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Columna de detalles de contacto -->
+            <div class="bg-gradient-to-b from-primary-50 to-gray-50 py-4 px-8 rounded-xl self-start">
+                <div class="space-y-5">
+                    <div>
+                        <h3
+                            class="text-2xl font-extrabold text-gray-900 flex text-center justify-center"
+                        >
+                            Información de Contacto
+                        </h3>
+                        <p
+                            class="text-gray-600 flex justify-center md:text-md text-center"
+                        >
+                            Estamos aquí para ayudarte a hacer realidad tu
+                            próximo proyecto digital.
+                        </p>
+                    </div>
+                    {
+                        contactDetails.map((detail) => (
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-primary-600 rounded-full">
+                                    <detail.icon />
+                                </div>
+                                <div>
+                                    <p class="md:text-md font-bold text-gray-900">
+                                        {detail.label}
+                                    </p>
+                                    <p class="md:text-base text-gray-600 font-normal">
+                                        {detail.value}
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                    }
+                    <hr class="border-t border-gray-300" />
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" target="_blank" class="text-gray-600">
+                            <LinkedInIcon />
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-600">
+                            <InstagramIcon />
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-600">
+                            <WhatsappIcon />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

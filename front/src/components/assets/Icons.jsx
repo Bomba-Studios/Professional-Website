@@ -186,7 +186,7 @@ export const LogoIcon = () => (
 export const LocationIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="hover:text-primary-400"
+        class="hover:text-primary-400 stroke-2 text-white"
         width="24"
         height="24"
         fill="none"
@@ -199,10 +199,28 @@ export const LocationIcon = () => (
     </svg>
 );
 
+export const CalendarIcon = () => (
+    <svg
+        class="hover:text-primary-400 stroke-2 text-white"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+        <path d="M16 3v4"></path>
+        <path d="M8 3v4"></path>
+        <path d="M4 11h16"></path>
+        <path d="M7 14h.013"></path>
+        <path d="M10.01 14h.005"></path>
+        <path d="M13.01 14h.005"></path>
+        <path d="M16.015 14h.005"></path>
+        <path d="M13.015 17h.005"></path>
+        <path d="M7.01 17h.005"></path>
+        <path d="M10.01 17h.005"></path>
+    </svg>
+)
+
 export const PhoneIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="hover:text-primary-400"
+        class="hover:text-primary-400 stroke-2 text-white"
         width="24"
         height="24"
         fill="none"
@@ -217,7 +235,7 @@ export const PhoneIcon = () => (
 export const MailIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="hover:text-primary-400"
+        class="hover:text-primary-400 stroke-2 text-white"
         width="24"
         height="24"
         fill="none"
@@ -230,21 +248,35 @@ export const MailIcon = () => (
     </svg>
 );
 
+
+export const WhatsappIcon = () => (
+    <svg
+        class="text-green-400"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+    </svg>
+)
+
 export const LinkedInIcon = () => (
     <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        stroke="currentColor"
-    >
-        <path
-            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-        ></path>
+        class="text-blue-400"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
         <path d="M8 11l0 5"></path>
         <path d="M8 8l0 .01"></path>
         <path d="M12 16l0 -5"></path>
         <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+    </svg>
+);
+
+export const InstagramIcon = () => (
+    <svg
+        class="text-pink-400"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+        <path d="M16.5 7.5l0 .01"></path>
     </svg>
 );
 

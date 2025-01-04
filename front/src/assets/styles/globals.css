@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 @layer base {
   html {
@@ -8,7 +10,7 @@
   }
 
   body {
-    @apply bg-slate-50;
+    @apply bg-slate-50 font-sans;
   }
 }
 
@@ -68,4 +70,8 @@ details[open] summary .toggle-icon::after {
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
+}
+
+.form-input {
+  @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium;
 }
