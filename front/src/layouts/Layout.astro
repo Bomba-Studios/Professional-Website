@@ -18,11 +18,11 @@ import SpeedInsights from "@vercel/speed-insights/astro";
         />
         <title>WebCraft - Transformamos Ideas en Experiencias Digitales</title>
     </head>
-    <Analytics />
-    <SpeedInsights />
     <Header />
     <body>
         <slot />
+        <Analytics />
+        <SpeedInsights />
         <Toaster position="bottom-right" client:load />
     </body>
     <Footer />
