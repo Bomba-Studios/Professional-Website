@@ -1,0 +1,145 @@
+---
+import {
+    CheckIcon,
+    LinkIcon,
+    LogoIcon,
+    UserIcon,
+    WorldIcon,
+} from "../assets/Icons";
+
+const pricingPlans = [
+    {
+        title: "Landing Page",
+        price: "400.000",
+        icon: WorldIcon,
+        features: [
+            "Diseño responsive",
+            "Formulario de contacto",
+            "Hosting incluido",
+            "Dominio .com (1 año)",
+        ],
+        description: "Perfecta para presentar tu negocio",
+        demoUrl: "https://landing-demo.webcraft.com",
+    },
+    {
+        title: "Sitio Web",
+        price: "600.000",
+        icon: LogoIcon,
+        features: [
+            "Hasta 5 páginas",
+            "Blog básico",
+            "SEO básico",
+            "Certificado SSL",
+        ],
+        popular: true,
+        description: "Ideal para pequeñas empresas",
+        demoUrl: "https://business-demo.webcraft.com",
+    },
+    {
+        title: "Portafolio Personal",
+        price: "500.000",
+        icon: UserIcon,
+        features: [
+            "Diseño único",
+            "Galería de proyectos",
+            "Blog personal",
+            "Integración con redes",
+        ],
+        description: "Muestra tu trabajo al mundo",
+        demoUrl: "https://portfolio-demo.webcraft.com",
+    },
+];
+---
+
+<section class="py-16 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Precios
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+                Soluciones web a tu medida desde $400.000 COP
+            </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {
+                pricingPlans.map((plan) => (
+                    <div
+                        class={`relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${
+                            plan.popular ? "ring-2 ring-primary-500 scale-110" : ""
+                        }`}
+                    >
+                        {plan.popular && (
+                            <div class="absolute top-0 right-0 bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                Popular
+                            </div>
+                        )}
+
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-2 bg-primary-100 rounded-lg">
+                                    <plan.icon />
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    {plan.title}
+                                </h3>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="flex items-baseline">
+                                    <span class="text-sm text-gray-500 font-medium">
+                                        Desde
+                                    </span>
+                                    <span class="ml-2 text-2xl font-bold text-gray-900">
+                                        $
+                                    </span>
+                                    <span class="text-3xl font-bold text-gray-900">
+                                        {plan.price}
+                                    </span>
+                                    <span class="ml-1 text-gray-500">COP</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    {plan.description}
+                                </p>
+                            </div>
+
+                            <ul class="space-y-2 mb-6">
+                                {plan.features.map((feature, index) => (
+                                    <li class="flex items-center text-sm">
+                                        <CheckIcon />
+                                        <span class="text-gray-600">
+                                            {feature}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <a
+                                    href="#contacto"
+                                    data-scroll
+                                    class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 ${
+                                        plan.popular
+                                            ? "bg-primary-600 text-white hover:bg-primary-700"
+                                            : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                                    }`}
+                                >
+                                    Comenzar
+                                </a>
+                                <a
+                                    href={plan.demoUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="flex items-center justify-center py-2 px-4 rounded-lg font-medium border border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-colors duration-300"
+                                >
+                                    Ver Demo <LinkIcon />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
