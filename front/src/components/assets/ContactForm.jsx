@@ -7,9 +7,24 @@ export default function ContactForm() {
     const [isSending, setIsSending] = createSignal(false);
     const [formValid, setFormValid] = createSignal(false);
 
+    // Generar un número de solicitud único
+    const generateRequestNumber = () => {
+        return 'REQ-' + Date.now();  // Genera un número único basado en el timestamp
+    };
+
+    // Obtener la fecha actual
+    const getCurrentDate = () => {
+        const date = new Date();
+        return date.toISOString(); // Formato de fecha ISO
+    };
+
     const sendEmail = async (event) => {
         event.preventDefault();
         setIsSending(true);
+
+        // Agregar fecha y número de solicitud al formulario
+        formRef.request_number.value = generateRequestNumber();  // Número de solicitud
+        formRef.date.value = getCurrentDate(); // Fecha de envío
 
         const promise = emailjs.sendForm(
             import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
@@ -74,6 +89,9 @@ export default function ContactForm() {
             method="POST"
             class="space-y-6"
         >
+            <input type="hidden" name="date" />
+            <input type="hidden" name="request_number" />
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {formFields.map((field, index) => (
                     <div
