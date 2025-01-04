@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
 @layer base {
@@ -16,9 +18,7 @@
 
 summary {
   display: block;
-  /* works in firefox */
   list-style: none;
-  /* works in firefox */
 }
 
 summary::after {
@@ -39,13 +39,11 @@ details summary {
   user-select: none;
 }
 
-/* Estilo para el ícono */
 details summary .toggle-icon::after {
   content: '+';
   transition: transform 0.3s ease;
 }
 
-/* Cambia el ícono cuando el details está abierto */
 details[open] summary .toggle-icon::after {
   content: '-';
 }
@@ -58,6 +56,11 @@ details[open] summary .toggle-icon::after {
   .btn-primary {
     @apply inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
   }
+
+  .btn-primary-disabled {
+    @apply inline-flex items-center px-6 py-3 rounded-full bg-gray-300 text-gray-100 cursor-not-allowed font-medium shadow-lg;
+  }
+
 
   .btn-link {
     @apply text-slate-600 font-medium transition-colors hover:text-primary-600;
@@ -74,4 +77,8 @@ details[open] summary .toggle-icon::after {
 
 .form-input {
   @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium;
+}
+
+.toast-custom {
+  @apply py-3 font-medium;
 }
