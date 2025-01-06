@@ -297,7 +297,7 @@ export const MainLogoIcon = () => (
             <path d="M14 4l-4 16" />
         </svg>
         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-purple-600">
-            WebCraft
+            BombaWeb
         </span>
     </div>
 );
