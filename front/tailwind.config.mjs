@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'node_modules/preline/dist/*.js',
+	],
 	theme: {
 		extend: {
 			fontFamily: {
 				sans: ['Outfit', 'serif'],
-			  },
+			},
 			colors: {
 				primary: {
 					50: '#f5f3ff',
@@ -37,5 +39,5 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('preline/plugin'),],
 }

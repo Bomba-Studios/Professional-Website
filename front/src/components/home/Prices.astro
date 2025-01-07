@@ -62,12 +62,14 @@ const pricingPlans = [
             </p>
         </div>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {
                 pricingPlans.map((plan) => (
                     <div
                         class={`relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${
-                            plan.popular ? "ring-2 ring-primary-500 md:scale-110" : ""
+                            plan.popular
+                                ? "ring-2 ring-primary-500 md:scale-110"
+                                : ""
                         }`}
                     >
                         {plan.popular && (
@@ -140,6 +142,159 @@ const pricingPlans = [
                     </div>
                 ))
             }
+        </div>
+
+        <div class="md:hidden">
+            <div
+                data-hs-carousel='{
+                "loadingClasses": "opacity-0",
+                "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+                "isAutoPlay": true, 
+                "speed": 3000,
+                "currentIndex": 1
+                }'
+                class="relative"
+            >
+                <div class="hs-carousel relative overflow-hidden min-h-[400px]">
+                    <div
+                        class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-300 opacity-0"
+                    >
+                        {
+                            pricingPlans.map((plan) => (
+                                <div
+                                    class={`my-2 mx-2 hs-carousel-slide relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
+                                        plan.popular
+                                            ? "ring-2 ring-primary-500 md:scale-110"
+                                            : ""
+                                    }`}
+                                >
+                                    {plan.popular && (
+                                        <div class="absolute top-0 right-0 bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                            Popular
+                                        </div>
+                                    )}
+
+                                    <div class="p-6">
+                                        <div class="flex items-center space-x-3 mb-4">
+                                            <div class="p-2 bg-primary-100 rounded-lg">
+                                                <plan.icon />
+                                            </div>
+                                            <h3 class="text-xl font-bold text-gray-900">
+                                                {plan.title}
+                                            </h3>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <div class="flex items-baseline">
+                                                <span class="text-sm text-gray-500 font-medium">
+                                                    Desde
+                                                </span>
+                                                <span class="ml-2 text-2xl font-bold text-gray-900">
+                                                    $
+                                                </span>
+                                                <span class="text-3xl font-bold text-gray-900">
+                                                    {plan.price}
+                                                </span>
+                                                <span class="ml-1 text-gray-500">
+                                                    COP
+                                                </span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 mt-1">
+                                                {plan.description}
+                                            </p>
+                                        </div>
+
+                                        <ul class="space-y-2 mb-6">
+                                            {plan.features.map(
+                                                (feature, index) => (
+                                                    <li class="flex items-center text-sm">
+                                                        <CheckIcon />
+                                                        <span class="text-gray-600">
+                                                            {feature}
+                                                        </span>
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+
+                                        <div class="grid grid-cols-1 gap-3">
+                                            <a
+                                                href="#contact-us"
+                                                data-scroll
+                                                class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 ${
+                                                    plan.popular
+                                                        ? "bg-primary-600 text-white hover:bg-primary-700"
+                                                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                                                }`}
+                                            >
+                                                Comenzar
+                                            </a>
+                                            {/* <a
+                                                href={plan.demoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex items-center justify-center py-2 px-4 rounded-lg font-medium border border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-colors duration-300"
+                                            >
+                                                Ver Demo <LinkIcon />
+                                            </a> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                >
+                    <span class="text-2xl" aria-hidden="true">
+                        <svg
+                            class="shrink-0 size-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button
+                    type="button"
+                    class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                >
+                    <span class="sr-only">Next</span>
+                    <span class="text-2xl" aria-hidden="true">
+                        <svg
+                            class="shrink-0 size-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <div
+                    class="hs-carousel-pagination flex justify-center absolute -bottom-5 start-0 end-0 space-x-2"
+                >
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -16,6 +16,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
             href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
             rel="stylesheet"
         />
+
         <title>BombaWeb - Transformamos Ideas en Experiencias Digitales</title>
     </head>
     <Header />
@@ -24,6 +25,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
         <Analytics />
         <SpeedInsights />
         <Toaster position="bottom-right" client:load />
+        <script src="../../node_modules/preline/dist/preline"></script>
     </body>
     <Footer />
 </html>
