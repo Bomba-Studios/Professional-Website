@@ -76,7 +76,7 @@ details[open] summary .toggle-icon::after {
 }
 
 .form-input {
-  @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium;
+  @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium focus:outline-primary-600 ;
 }
 
 .toast-custom {
