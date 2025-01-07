@@ -51,15 +51,18 @@ const pricingPlans = [
 ];
 ---
 
-<section class="py-16 bg-gradient-to-b from-white to-gray-50" id="pricing">
+<section
+    class="md:min-h-screen md:flex md:items-center md:justify-center bg-gradient-to-b from-white to-gray-50"
+    id="pricing"
+>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
+        <div class="text-center mb-8 md:mb-20">
             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Precios
+                Elige el plan que se adapte a tu negocio
             </h2>
-            <p class="mt-4 text-xl text-gray-600">
+            <!-- <p class="mt-4 text-xl text-gray-600">
                 Soluciones web a tu medida desde $400.000 COP
-            </p>
+            </p> -->
         </div>
 
         <div class="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -149,8 +152,6 @@ const pricingPlans = [
                 data-hs-carousel='{
                 "loadingClasses": "opacity-0",
                 "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
-                "isAutoPlay": true, 
-                "speed": 3000,
                 "currentIndex": 1
                 }'
                 class="relative"
@@ -298,3 +299,5 @@ const pricingPlans = [
         </div>
     </div>
 </section>
+
+<script src="../../../node_modules/preline/dist/preline"></script>
