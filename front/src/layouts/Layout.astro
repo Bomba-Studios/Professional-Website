@@ -5,7 +5,7 @@ import { Toaster } from "solid-toast";
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,22 +15,32 @@ import { Toaster } from "solid-toast";
         />
         <meta
             name="keywords"
-            content="diseño web Bogotá, desarrollo de páginas web Bogotá y toda Colombia, diseño web responsive, desarrollo web SEO, páginas web para negocios Bogotá"
+            content="diseño web Bogotá, desarrollo de páginas web Colombia, diseño web responsive, desarrollo web SEO, páginas web para negocios Bogotá"
         />
         <meta name="author" content="BombaWeb" />
         <meta name="geo.region" content="CO-DC" />
         <meta name="geo.placename" content="Bogotá" />
+        <meta
+            property="og:title"
+            content="Diseño Web en Bogotá | BombaWeb - Tu Socio Digital en Colombia"
+        />
+        <meta
+            property="og:description"
+            content="Creamos sitios optimizados para SEO, rendimiento y adaptabilidad. ¡Impulsa tu presencia online hoy!"
+        />
+        <meta property="og:url" content="https://bombaweb.pages.dev" />
+        <meta property="og:type" content="website" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>
             Diseño Web en Bogotá | BombaWeb - Tu Socio Digital en Colombia
         </title>
     </head>
-    <Header />
     <body>
+        <Header />
         <slot />
         <Toaster position="bottom-right" client:load />
+        <Footer />
     </body>
-    <Footer />
 </html>
 
 <style>
