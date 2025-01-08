@@ -31,7 +31,7 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
         </div>
     </div>
     <div
-        class="absolute bg-white h-screen -right-[80%] top-0 w-4/5 p-10 pt-4 shadow-2xl transition-all duration-300 z-50 rounded-l-3xl"
+        class="absolute bg-white h-screen top-0 p-10 w-4/5 pt-4 shadow-2xl transition-all duration-300 z-50 rounded-l-3xl opacity-0 invisible"
         id="mobile-menu"
     >
         <button id="close-menu" class="absolute right-4 top-5" aria-label="Cerrar Menu"
@@ -103,22 +103,23 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
     const mainHeader = document.getElementById("main-header");
 
     openMenu?.addEventListener("click", () => {
-        mobileMenu?.classList.remove("-right-[80%]");
-        mobileMenu?.classList.add("right-0");
+        mobileMenu?.classList.remove("opacity-0", "invisible");
+        mobileMenu?.classList.add("translate-x-[25%]", "opacity-100", "visible");
         home?.classList.add("opacity-10");
         mainHeader?.classList.add("opacity-10");
     });
+
     closeMenu?.addEventListener("click", () => {
-        mobileMenu?.classList.add("-right-[80%]");
-        mobileMenu?.classList.remove("right-0");
+        mobileMenu?.classList.add("opacity-0", "invisible");
+        mobileMenu?.classList.remove("translate-x-[25%]", "opacity-100", "visible");
         home?.classList.remove("opacity-10");
         mainHeader?.classList.remove("opacity-10");
     });
 
     links.forEach((link) => {
         link.addEventListener("click", () => {
-            mobileMenu?.classList.add("-right-[80%]");
-            mobileMenu?.classList.remove("right-0");
+            mobileMenu?.classList.add("opacity-0", "invisible");
+            mobileMenu?.classList.remove("translate-x-[25%]", "opacity-100", "visible");
             home?.classList.remove("opacity-10");
             mainHeader?.classList.remove("opacity-10");
         });
