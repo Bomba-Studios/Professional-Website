@@ -79,6 +79,10 @@ details[open] summary .toggle-icon::after {
   @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium focus:outline-primary-600;
 }
 
+.form-input::placeholder {
+  @apply focus:font-light focus:italic;
+}
+
 .toast-custom {
   @apply py-3 font-medium;
 }

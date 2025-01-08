@@ -1,16 +1,16 @@
 ---
-import { MainLogoIcon } from "./assets/Icons";
+import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
 ---
 
 <header
     id="header"
     class="absolute w-full z-50 transition-all duration-300 bg-transparent"
 >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6" id="main-header">
         <div class="flex justify-between items-center py-4">
             <a href="#hero" data-scroll><MainLogoIcon /></a>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#hero" class="btn-link" data-scroll>Inicio</a>
+                <a href="#hero" class=" btn-link" data-scroll>Inicio</a>
                 <a href="#services" class="btn-link" data-scroll>Servicios</a>
                 <a href="#our-process" class="btn-link" data-scroll
                     >Nuestro Proceso</a
@@ -23,7 +23,19 @@ import { MainLogoIcon } from "./assets/Icons";
                     >Contáctanos</a
                 >
             </nav>
+            <button id="open-menu" class="md:hidden"><BurguerMenuIcon /></button>
         </div>
+    </div>
+    <div class="hidden absolute bg-white h-screen right-0 top-0 w-3/5 p-10 pt-10 shadow-2xl" id="mobile-menu">
+        <button id="close-menu" class="absolute right-4 top-4"><CloseButtonIcon /></button>
+        <ul class="flex flex-col space-y-4">
+            <li><a href="#hero" class="item-menu btn-link" data-scroll>Inicio</a></li>
+            <li><a href="#services" class="item-menu btn-link" data-scroll>Servicios</a></li>
+            <li><a href="#our-process" class="item-menu btn-link" data-scroll>Nuestro Proceso</a></li>
+            <li><a href="#why-choose-us" class="item-menu btn-link" data-scroll>¿Por qué elegirnos?</a></li>
+            <li><a href="#pricing" class="item-menu btn-link" data-scroll>Planes</a></li>
+            <li><a href="#contact-us" class="btn-primary item-menu mt-5" data-scroll>Contáctanos</a></li>
+        </ul>
     </div>
 </header>
 
@@ -47,5 +59,31 @@ import { MainLogoIcon } from "./assets/Icons";
             );
             header?.classList.add("absolute", "bg-transparent");
         }
+    });
+
+    const openMenu = document.getElementById("open-menu");
+    const closeMenu = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const home = document.getElementById("home");
+    const links = document.querySelectorAll(".item-menu");
+    const mainHeader = document.getElementById("main-header");
+
+    openMenu?.addEventListener("click", () => {
+        mobileMenu?.classList.remove("hidden");
+        home?.classList.add("opacity-10");
+        mainHeader?.classList.add("opacity-10");
+    });
+    closeMenu?.addEventListener("click", () => {
+        mobileMenu?.classList.add("hidden");
+        home?.classList.remove("opacity-10");
+        mainHeader?.classList.remove("opacity-10");
+    });
+
+    links.forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu?.classList.add("hidden");
+            home?.classList.remove("opacity-10");
+            mainHeader?.classList.remove("opacity-10");
+        });
     });
 </script>
