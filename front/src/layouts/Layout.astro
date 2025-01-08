@@ -2,8 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { Toaster } from "solid-toast";
-import Analytics from "@vercel/analytics/astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -22,8 +20,6 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     <Header />
     <body>
         <slot />
-        <Analytics />
-        <SpeedInsights />
         <Toaster position="bottom-right" client:load />
     </body>
     <Footer />
