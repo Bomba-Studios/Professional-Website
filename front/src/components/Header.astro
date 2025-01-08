@@ -117,7 +117,8 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
 
     links.forEach((link) => {
         link.addEventListener("click", () => {
-            mobileMenu?.classList.add("hidden");
+            mobileMenu?.classList.add("-right-[80%]");
+            mobileMenu?.classList.remove("right-0");
             home?.classList.remove("opacity-10");
             mainHeader?.classList.remove("opacity-10");
         });
