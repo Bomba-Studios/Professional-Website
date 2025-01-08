@@ -10,7 +10,7 @@ export const CloseButtonIcon = () => (
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        >
+    >
         <path d="M18 6l-12 12" />
         <path d="M6 6l12 12" />
     </svg>
@@ -28,7 +28,7 @@ export const BurguerMenuIcon = () => (
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        >
+    >
         <path d="M4 6l16 0" />
         <path d="M4 12l16 0" />
         <path d="M4 18l16 0" />
@@ -401,5 +401,13 @@ export const LinkIcon = () => (
         <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
         <path d="M11 13l9 -9"></path>
         <path d="M15 4h5v5"></path>
+    </svg>
+);
+
+export const DownArrowIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" stroke-width="2">
+        <path d="M12 5l0 14"></path>
+        <path d="M18 13l-6 6"></path>
+        <path d="M6 13l6 6"></path>
     </svg>
 );

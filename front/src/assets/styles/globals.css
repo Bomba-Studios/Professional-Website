@@ -8,12 +8,14 @@
   font-weight: 100;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Outfit';
   src: url('../fonts/static/Outfit-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Outfit';
   src: url('../fonts/static/Outfit-Light.ttf') format('truetype');
@@ -105,20 +107,23 @@ details[open] summary .toggle-icon::after {
   }
 
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border-2 border-transparent;
   }
 
   .btn-primary-disabled {
     @apply inline-flex items-center px-6 py-3 rounded-full bg-gray-300 text-gray-100 cursor-not-allowed font-medium shadow-lg;
   }
 
+  .btn-ghost {
+    @apply px-6 py-3 hover:bg-primary-600/10 hover:text-primary-800 text-primary-600 border-2 border-primary-600 inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5
+  }
 
   .btn-link {
     @apply text-slate-600 font-medium transition-colors hover:text-primary-600;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-bold tracking-tight;
+    @apply text-[52px] md:text-5xl font-bold tracking-tight;
   }
 
   .card-hover {

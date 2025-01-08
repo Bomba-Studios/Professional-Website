@@ -1,5 +1,5 @@
 ---
-import { CleanCodeIcon } from "../assets/Icons";
+import { CleanCodeIcon, DownArrowIcon } from "../assets/Icons";
 ---
 
 <section
@@ -16,37 +16,47 @@ import { CleanCodeIcon } from "../assets/Icons";
         >
         </div>
     </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 text-center lg:text-left">
+    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 items-center">
+            <div class="space-y-8 text-left">
                 <div class="space-y-4">
-                    <h1 class="section-title">
-                        Transformamos Ideas en
+                    <h1
+                        class="text-[46px] md:text-[3.5vw] leading-[1.1em] font-bold"
+                    >
+                        En <span class="gradient-text">BombaWeb </span>Transformamos
+                        Ideas en
                         <span class="gradient-text">Experiencias Digitales</span
                         >
                     </h1>
-                    <p class="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0">
-                        Creamos sitios web únicos y memorables que cautivan a tu
-                        audiencia y potencian tu presencia digital.
-                    </p>
                 </div>
                 <div
-                    class="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start"
+                    class="flex flex-col sm:flex-row gap-4 items-center justify-start"
                 >
-                    <a href="#pricing" data-scroll class="btn-primary w-fit">
-                        Inicia tu Proyecto &rarr;
+                    <a
+                        href="#pricing"
+                        data-scroll
+                        class="btn-primary md:w-fit gap-1 w-full"
+                    >
+                        Inicia tu página web <DownArrowIcon />
+                    </a>
+                    <a
+                        href="#"
+                        data-scroll
+                        class="btn-ghost mb-8 md:mb-0 w-full md:w-fit"
+                    >
+                        ¿Por qué tener una página web en 2025?
                     </a>
                 </div>
             </div>
 
-            <div class="relative lg:block">
+            <div class="hidden relative lg:block">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-primary-600/10 to-purple-600/10"
                     >
                     </div>
                     <img
-                        src="/main.webp"
+                        src="/bg.webp"
                         alt="Desarrollo web"
                         class="w-full h-full object-cover"
                     />
