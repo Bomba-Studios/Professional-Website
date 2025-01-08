@@ -114,7 +114,7 @@ export default function ContactForm() {
                 name="message"
                 placeholder="Cuéntanos sobre tu proyecto..."
                 required
-                class="w-full h-56 px-4 py-3 rounded-xl bg-gray-100 font-medium resize-none focus:outline-primary-600"
+                class="w-full h-56 px-4 py-3 rounded-xl bg-gray-100 font-medium resize-none focus:outline-primary-600 focus:font-light focus:italic"
                 onInput={handleInputChange}
             ></textarea>
             <button
