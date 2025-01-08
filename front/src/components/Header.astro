@@ -26,7 +26,7 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
                     >Contáctanos</a
                 >
             </nav>
-            <button id="open-menu" class="md:hidden"><BurguerMenuIcon /></button
+            <button id="open-menu" class="md:hidden"><BurguerMenuIcon aria-label="Abrir Menu"/></button
             >
         </div>
     </div>
@@ -34,7 +34,7 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
         class="hidden absolute bg-white h-screen right-0 top-0 w-3/5 p-10 pt-10 shadow-2xl"
         id="mobile-menu"
     >
-        <button id="close-menu" class="absolute right-4 top-4"
+        <button id="close-menu" class="absolute right-4 top-4" aria-label="Cerrar Menu"
             ><CloseButtonIcon /></button
         >
         <ul class="flex flex-col space-y-4">

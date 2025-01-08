@@ -117,7 +117,7 @@ export default function ContactForm() {
                 class="w-full h-56 px-4 py-3 rounded-xl bg-gray-100 font-medium resize-none focus:outline-primary-600 focus:font-light focus:italic"
                 onInput={handleInputChange}
             ></textarea>
-            <button
+            <button aria-label='Enviar Mensaje'
                 type="submit"
                 class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center
                     ${isSending() || !formValid()
