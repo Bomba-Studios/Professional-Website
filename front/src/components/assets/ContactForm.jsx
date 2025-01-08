@@ -66,7 +66,7 @@ export default function ContactForm() {
         {
             name: "name",
             type: "text",
-            placeholder: "¿Cómo te llamas?*",
+            placeholder: "Nombre*",
             required: true,
         },
         {
