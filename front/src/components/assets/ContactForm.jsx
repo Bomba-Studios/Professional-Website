@@ -78,7 +78,8 @@ export default function ContactForm() {
         {
             name: "phone",
             type: "tel",
-            placeholder: "WhatsApp o teléfono (opcional)",
+            placeholder: "WhatsApp o teléfono*",
+            required: true,
         },
     ];
 
@@ -112,7 +113,7 @@ export default function ContactForm() {
             </div>
             <textarea
                 name="message"
-                placeholder="Cuéntanos sobre tu proyecto..."
+                placeholder="Cuéntanos sobre tu proyecto...*"
                 required
                 class="w-full h-56 px-4 py-3 rounded-xl bg-gray-100 font-medium resize-none focus:outline-primary-600 focus:font-light focus:italic"
                 onInput={handleInputChange}
