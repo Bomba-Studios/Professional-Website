@@ -9,30 +9,38 @@ const faqItems = [
         answer: "Solo necesitas tener una idea clara de tu proyecto y cualquier material que quieras incluir (logos, textos, imágenes). ¡Nosotros nos encargamos del resto!",
     },
     {
-        question: "¿Ofrecen mantenimiento post-lanzamiento?",
-        answer: "Sí, ofrecemos planes de mantenimiento que incluyen actualizaciones, respaldos y soporte técnico para mantener tu sitio funcionando perfectamente.",
+        question: "¿El diseño es personalizado o usas plantillas?",
+        answer: "El diseño es completamente personalizado para tu marca y tus necesidades, asegurando que tu sitio web se distinga de los demás.",
     },
     {
-        question: "¿Puedo actualizar el contenido yo mismo?",
-        answer: "¡Absolutamente! Implementamos un sistema de gestión de contenido intuitivo que te permite actualizar textos, imágenes y otros contenidos fácilmente.",
+        question: "¿Ofrecen soluciones móviles?",
+        answer: "Sí, todos nuestros sitios web están diseñados para ser completamente responsivos, lo que significa que se adaptarán perfectamente a cualquier dispositivo móvil.",
     },
 ];
 ---
 
-<section class="py-20 bg-gradient-to-b from-white to-gray-50" id="FAQ">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Preguntas Frecuentes
-            </h2>
-            <p class="mt-4 text-xl text-gray-600">
-                Todo lo que necesitas saber sobre nuestros servicios
-            </p>
-        </div>
-
-        <div class="space-y-4">
-            {
-                faqItems.map((faq) => (
+<section class="py-20 md:py-24 bg-slate-100" id="FAQ">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="gap-4 flex flex-col text-center md:text-start">
+                <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
+                    ¿Tienes preguntas? <br />
+                    <span class="gradient-text">Nosotros te respondemos.</span>
+                </h2>
+                <p class="hidden md:block md:text-2xl text-gray-600">
+                    Explora las respuestas a las dudas más comunes que tenemos
+                    sobre nuestros servicios de desarrollo web. ¡Tu tranquilidad
+                    es nuestra prioridad!
+                </p>
+                <span>
+                    ¿Tienes más dudas?
+                    <a href="#contact-us" data-scroll class="text-primary-600">
+                        Contactanos ahora
+                    </a>
+                </span>
+            </div>
+            <div class="space-y-4">
+                {faqItems.map((faq) => (
                     <details class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                         <summary class="w-full px-6 py-4 flex justify-between items-center gap-4 cursor-pointer">
                             <span class="text-left font-medium text-gray-900">
@@ -42,8 +50,8 @@ const faqItems = [
                         </summary>
                         <p class="text-gray-600 px-6 pb-4">{faq.answer}</p>
                     </details>
-                ))
-            }
+                ))}
+            </div>
         </div>
     </div>
 </section>

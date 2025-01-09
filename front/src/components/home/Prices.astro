@@ -51,21 +51,18 @@ const pricingPlans = [
 ];
 ---
 
-<section
-    class="md:min-h-screen md:flex md:items-center md:justify-center bg-gradient-to-b from-white to-gray-50 py-20 md:py-0"
-    id="pricing"
->
+<section class="py-20 md:py-24 bg-slate-100" id="pricing">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 md:mb-20">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Elige el plan que se adapte a tu negocio
+            <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
+                Tu web, tu plan, <span class="gradient-text">tu manera</span>
             </h2>
-            <!-- <p class="mt-4 text-xl text-gray-600">
-                Soluciones web a tu medida desde $400.000 COP
-            </p> -->
+            <p class="mt-4 text-xl md:text-2xl text-gray-600">
+                Elige el plan que mejor se ajuste a tus necesidades y destaca en línea.
+            </p>
         </div>
 
-        <div class="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="hidden md:grid gap-12 md:grid-cols-2 lg:grid-cols-3">
             {
                 pricingPlans.map((plan) => (
                     <div

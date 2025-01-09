@@ -107,7 +107,7 @@ details[open] summary .toggle-icon::after {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border-2 border-transparent;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
   }
 
   .btn-primary-disabled {
@@ -115,7 +115,7 @@ details[open] summary .toggle-icon::after {
   }
 
   .btn-ghost {
-    @apply px-6 py-3 hover:bg-primary-600/10 hover:text-primary-800 text-primary-600 border-2 border-primary-600 inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5
+    @apply px-6 py-3 hover:bg-primary-600/10 hover:text-primary-800 text-primary-600 border border-primary-600 inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5
   }
 
   .btn-link {
