@@ -8,7 +8,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bombaweb.pages.dev/',
+  site: 'https://koaladevs.pages.dev/',
   integrations: [solidJs(), tailwind(), sitemap()],
   vite: {
     assetsInclude: ['**/*.webp']

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bombaweb.pages.dev/sitemap-index.xml
+Sitemap: https://bombaweb.pages.dev/sitemap-0.xml
