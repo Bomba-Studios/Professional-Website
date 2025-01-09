@@ -317,24 +317,13 @@ export const InstagramIcon = () => (
 );
 
 export const MainLogoIcon = () => (
-    <div class="flex items-center space-x-3 h-8" >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="text-primary-600 stroke-2"
-            width={32}
-            height={32}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round" >
-            <path d="M7 8l-4 4l4 4" />
-            <path d="M17 8l4 4l-4 4" />
-            <path d="M14 4l-4 16" />
-        </svg>
-        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-purple-600">
-            BombaWeb
-        </span>
+    <div class="flex items-center space-x-2 h-8" >
+        <img src="/koala.webp" alt="Koala-kerismaker" class="w-10 h-10" />
+        <div class="flex flex-col">
+            <span class="text-2xl md:text-3xl font-bold bg-clip-text text-primary-600">
+                KoalaDevs
+            </span>
+        </div>
     </div>
 );
 
@@ -401,13 +390,5 @@ export const LinkIcon = () => (
         <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
         <path d="M11 13l9 -9"></path>
         <path d="M15 4h5v5"></path>
-    </svg>
-);
-
-export const DownArrowIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" stroke-width="2">
-        <path d="M12 5l0 14"></path>
-        <path d="M18 13l-6 6"></path>
-        <path d="M6 13l6 6"></path>
     </svg>
 );
