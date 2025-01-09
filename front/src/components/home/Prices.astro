@@ -51,13 +51,13 @@ const pricingPlans = [
 ];
 ---
 
-<section class="py-20 md:py-24 bg-slate-100" id="pricing">
+<section class="bg-slate-100 py-10" id="pricing">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 md:mb-20">
             <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
                 Tu web, tu plan, <span class="gradient-text">tu manera</span>
             </h2>
-            <p class="mt-4 text-xl md:text-2xl text-gray-600">
+            <p class="mt-4 text-xl md:text-2xl text-gray-600 leading-[1.1em]">
                 Elige el plan que mejor se ajuste a tus necesidades y destaca en línea.
             </p>
         </div>
@@ -73,7 +73,7 @@ const pricingPlans = [
                         }`}
                     >
                         {plan.popular && (
-                            <div class="absolute top-0 right-0 bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                            <div class="absolute top-0 right-0 bg-primary-500 text-gray-100 text-xs font-bold px-3 py-1 rounded-bl-lg leading-[1.1em]">
                                 Popular
                             </div>
                         )}
@@ -83,25 +83,25 @@ const pricingPlans = [
                                 <div class="p-2 bg-primary-100 rounded-lg">
                                     <plan.icon />
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900">
+                                <h3 class="text-xl font-bold text-gray-900 leading-[1.1em]">
                                     {plan.title}
                                 </h3>
                             </div>
 
                             <div class="mb-4">
                                 <div class="flex items-baseline">
-                                    <span class="text-sm text-gray-500 font-medium">
+                                    <span class="text-sm text-gray-500 font-medium leading-[1.1em]">
                                         Desde
                                     </span>
-                                    <span class="ml-2 text-2xl font-bold text-gray-900">
+                                    <span class="ml-2 text-2xl font-bold text-gray-900 leading-[1.1em]">
                                         $
                                     </span>
-                                    <span class="text-3xl font-bold text-gray-900">
+                                    <span class="text-3xl font-bold text-gray-900 leading-[1.1em]">
                                         {plan.price}
                                     </span>
-                                    <span class="ml-1 text-gray-500">COP</span>
+                                    <span class="ml-1 text-gray-500 leading-[1.1em]">COP</span>
                                 </div>
-                                <p class="text-sm text-gray-600 mt-1">
+                                <p class="text-sm text-gray-600 mt-1 leading-[1.1em]">
                                     {plan.description}
                                 </p>
                             </div>
@@ -110,7 +110,7 @@ const pricingPlans = [
                                 {plan.features.map((feature, index) => (
                                     <li class="flex items-center text-sm gap-1.5">
                                         <CheckIcon />
-                                        <span class="text-gray-600">
+                                        <span class="text-gray-600 leading-[1.1em]">
                                             {feature}
                                         </span>
                                     </li>
@@ -121,7 +121,7 @@ const pricingPlans = [
                                 <a
                                     href="#contact-us"
                                     data-scroll
-                                    class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 ${
+                                    class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 leading-[1.1em] ${
                                         plan.popular
                                             ? "bg-primary-600 text-white hover:bg-primary-700"
                                             : "bg-gray-100 text-gray-800 hover:bg-gray-200"

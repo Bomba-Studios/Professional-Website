@@ -57,7 +57,7 @@ const Process = () => {
   });
 
   return (
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20">
+    <div class="relative mx-auto px-3 md:px-0">
       {/* Vertical Line */}
       <div class="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-200 to-gray-300">
         <div
@@ -67,7 +67,7 @@ const Process = () => {
       </div>
 
       {/* Steps */}
-      <div class="space-y-12 lg:space-y-24">
+      <div class="space-y-12 lg:space-y-16">
         {process.map((step) => (
           <div
             class={`timeline-step transition-all duration-700 ease-out relative pl-12 lg:pl-0 group ${step.number <= activeStep() ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -90,7 +90,7 @@ const Process = () => {
                   <div class="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-primary-50 to-primary-100 rounded-full flex items-center justify-center transform transition-transform group-hover:rotate-12">
                     <step.icon />
                   </div>
-                  <div class="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-primary-600 rounded-full flex items-center justify-center text-[10px] sm:text-xs text-white font-bold shadow-lg transform translate-x-1/2 -translate-y-1/2">
+                  <div class="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-primary-600 rounded-full flex items-center justify-center text-[10px] sm:text-xs text-white font-bold shadow-lg transform translate-x-1/2 -translate-y-1/2 leading-[1.1em]">
                     {step.number}
                   </div>
                 </div>
@@ -101,8 +101,8 @@ const Process = () => {
                   }`}
               >
                 <div class="bg-white p-4 sm:p-6 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-gray-100">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-900">{step.title}</h3>
-                  <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{step.description}</p>
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-900 leading-[1.1em]">{step.title}</h3>
+                  <p class="text-sm sm:text-base text-gray-600 leading-[1.1em]">{step.description}</p>
                 </div>
               </div>
             </div>

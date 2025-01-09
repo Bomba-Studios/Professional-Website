@@ -63,10 +63,6 @@
   html {
     scroll-behavior: smooth;
   }
-
-  body {
-    @apply bg-slate-50 font-sans;
-  }
 }
 
 summary {
@@ -107,38 +103,38 @@ details[open] summary .toggle-icon::after {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
+    @apply leading-[1.1em] inline-flex items-center justify-center px-6 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
   }
 
   .btn-primary-disabled {
-    @apply inline-flex items-center px-6 py-3 rounded-full bg-gray-300 text-gray-100 cursor-not-allowed font-medium shadow-lg;
+    @apply inline-flex items-center px-6 py-3 rounded-full bg-gray-300 text-gray-100 cursor-not-allowed font-medium shadow-lg leading-[1.1em];
   }
 
   .btn-ghost {
-    @apply px-6 py-3 hover:bg-primary-600/10 hover:text-primary-800 text-primary-600 border border-primary-600 inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5
+    @apply leading-[1.1em] px-6 py-3 hover:bg-primary-600/10 hover:text-primary-800 text-primary-600 border border-primary-600 inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5
   }
 
   .btn-link {
-    @apply text-slate-600 font-medium transition-colors hover:text-primary-600;
-  }
-
-  .section-title {
-    @apply text-[52px] md:text-5xl font-bold tracking-tight;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply text-slate-600 font-medium transition-colors hover:text-primary-600 leading-[1.1em];
   }
 }
 
 .form-input {
-  @apply w-full px-4 py-3 bg-gray-100 rounded-xl font-medium focus:outline-primary-600;
+  @apply w-full px-4 py-3 bg-gray-200 rounded-xl font-medium focus:outline-slate-300 leading-[1.1em] focus:bg-slate-200;
+}
+
+.form-textarea-input {
+  @apply w-full h-32 md:h-56 px-4 py-3 rounded-xl bg-gray-200 font-medium resize-none focus:outline-slate-300 leading-[1.1em] focus:bg-slate-200
+}
+
+.form-textarea-input::placeholder {
+  @apply focus:font-light focus:italic leading-[1.1em];
 }
 
 .form-input::placeholder {
-  @apply focus:font-light focus:italic;
+  @apply focus:font-light focus:italic leading-[1.1em];
 }
 
 .toast-custom {
-  @apply py-3 font-medium;
+  @apply py-3 font-medium leading-[1.1em];
 }
