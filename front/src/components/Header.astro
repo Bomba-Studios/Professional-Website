@@ -1,5 +1,13 @@
 ---
 import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
+
+const dropdownItemsAbout = [
+  { label: "Nuestros Servicios", href: "#services" },
+  { label: "Nuestro Proceso", href: "#our-process" },
+  { label: "¿Por qué elegirnos?", href: "#why-choose-us" },
+  { label: "Preguntas Frecuentes", href: "#FAQ" }
+];
+
 ---
 
 <header
@@ -7,21 +15,26 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
     class="absolute w-full z-50 transition-all duration-300 bg-transparent"
 >
     <div class="container mx-auto px-4 sm:px-6" id="main-header">
-        <div class="flex justify-between items-center py-4">
+        <div class="flex justify-between items-center py-4 md:py-0">
             <a href="#hero" data-scroll><MainLogoIcon /></a>
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden md:flex items-center space-x-8 min-h-[84px]">
                 <a href="#hero" class="btn-link" data-scroll>Inicio</a>
-                <a href="#services" class="btn-link" data-scroll>Servicios</a>
-                <a href="#our-process" class="btn-link" data-scroll
-                    >Nuestro Proceso</a
-                >
-                <a href="#why-choose-us" class="btn-link" data-scroll
-                    >¿Por qué elegirnos?</a
-                >
+                <div class="relative group flex items-center min-h-[84px]">
+                    <span class="btn-link cursor-pointer">
+                      Sobre Nosotros
+                    </span>
+                    <div class=" absolute -left-10 top-[84px] hidden w-48 bg-gradient-to-t from-white to-white/95 border border-gray-200 rounded-md shadow-lg group-hover:block">
+                      {dropdownItemsAbout.map(item => (
+                        <a 
+                          href={item.href} 
+                          class="btn-link block px-4 py-2 hover:bg-gray-100 hover:rounded-md hover:text-primary-600"
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 <a href="#pricing" class="btn-link" data-scroll>Planes</a>
-                <a href="#FAQ" class="btn-link" data-scroll
-                    >Preguntas Frecuentes</a
-                >
                 <a href="#contact-us" class="btn-primary" data-scroll>
                     Cotiza tu página web <span class="animate-bounce mt-1"
                     ></span></a
@@ -49,7 +62,7 @@ import { BurguerMenuIcon, MainLogoIcon, CloseButtonIcon } from "./assets/Icons";
             </li>
             <li>
                 <a href="#services" class="item-menu btn-link" data-scroll
-                    >Servicios</a
+                    >Nuestros Servicios</a
                 >
             </li>
             <li>
