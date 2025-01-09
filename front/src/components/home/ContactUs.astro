@@ -22,7 +22,10 @@ const contactDetails = [
 ];
 ---
 
-<section class="min-h-screen flex items-center overflow-hidden py-20 md:py-24 relative" id="contact-us">
+<section
+    class="min-h-screen flex items-center overflow-hidden relative py-10 md:py-20 bg-slate-100"
+    id="contact-us"
+>
     <div class="absolute inset-0 opacity-30">
         <div
             class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary-400/30 to-purple-400/30 rounded-full blur-3xl"
@@ -35,18 +38,18 @@ const contactDetails = [
     </div>
 
     <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
+        <div class="text-center md:mb-12">
             <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
                 ¡Hablemos sobre tu <span class="gradient-text"
                     >próximo proyecto!</span
                 >
             </h2>
-            <p class="mt-4 text-xl md:text-2xl text-gray-600">
+            <p class="mt-4 text-xl md:text-2xl text-gray-600 leading-[1.1em]">
                 Estamos listos para hacer realidad tu visión digital
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 md:gap-8">
             <div class="rounded-xl">
                 <div class="w-full">
                     <ContactForm client:load />
@@ -54,17 +57,17 @@ const contactDetails = [
             </div>
 
             <div
-                class="bg-gradient-to-b from-primary-50 to-gray-50 py-4 px-8 rounded-xl self-start"
+                class="bg-gray-200 py-4 px-8 rounded-xl self-start"
             >
-                <div class="space-y-5">
+                <div class="space-y-4 flex gap-2 flex-col">
                     <div>
                         <h3
-                            class="text-2xl font-extrabold text-gray-900 flex text-center justify-center"
+                            class="text-2xl leading-[1.1em] font-bold flex text-center justify-center mb-2"
                         >
                             Información de Contacto
                         </h3>
                         <p
-                            class="text-gray-600 flex justify-center md:text-md text-center"
+                            class="text-gray-600 flex justify-center md:text-lg text-center"
                         >
                             Estamos aquí para ayudarte a hacer realidad tu
                             próximo proyecto digital.
@@ -77,17 +80,17 @@ const contactDetails = [
                                     <detail.icon />
                                 </div>
                                 <div>
-                                    <p class="md:text-md font-bold text-gray-900">
+                                    <p class="md:text-md leading-[1.1em] font-bold text-gray-900">
                                         {detail.label}
                                     </p>
-                                    <p class="md:text-base text-gray-600 font-normal">
+                                    <p class="md:text-base leading-[1.1em] text-gray-600 font-normal">
                                         {detail.value}
                                     </p>
                                 </div>
                             </div>
                         ))
                     }
-                    <hr class="border-t border-gray-300" />
+                    <hr class="border-t border-gray-400" />
                     <div class="flex justify-center space-x-4">
                         <a
                             href="https://www.linkedin.com/in/jhonatandavidbecerradonado-frontend/"

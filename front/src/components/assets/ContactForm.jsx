@@ -88,7 +88,7 @@ export default function ContactForm() {
             ref={(el) => (formRef = el)}
             onSubmit={sendEmail}
             method="POST"
-            class="space-y-6"
+            class="space-y-2 md:space-y-6"
         >
             <input type="hidden" name="date" />
             <input type="hidden" name="request_number" />
@@ -115,7 +115,7 @@ export default function ContactForm() {
                 name="message"
                 placeholder="Cuéntanos sobre tu proyecto...*"
                 required
-                class="w-full h-56 px-4 py-3 rounded-xl bg-gray-100 font-medium resize-none focus:outline-primary-600 focus:font-light focus:italic"
+                class="form-textarea-input"
                 onInput={handleInputChange}
             ></textarea>
             <button aria-label='Enviar Mensaje'

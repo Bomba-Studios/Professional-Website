@@ -6,7 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 anchor.getAttribute("href"),
             );
             if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
+                const headerOffset = 80; // Altura del header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                });
             }
         });
     });

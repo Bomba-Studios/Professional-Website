@@ -2,19 +2,27 @@
 import Process from "../assets/Process";
 ---
 
-<section
-    class="py-20 md:py-24"
-    id="our-process"
->
+<section class="bg-slate-100 py-10" id="our-process">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Nuestro Proceso
-            </h2>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 md:mb-10">
-                Un enfoque estructurado para hacer realidad tu proyecto
-            </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="flex flex-col text-center md:text-start">
+                <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
+                    ¿Cómo es <span class="gradient-text">Nuestro Proceso?</span>
+                </h2>
+                <p
+                    class="mt-4 text-xl md:text-2xl text-gray-600 leading-[1.1em] "
+                >
+                    Transformamos tus ideas en un sitio web funcional y
+                    atractivo, optimizando cada etapa del proceso desde la
+                    planificación hasta el lanzamiento.
+                </p>
+                <img
+                    src="/koalas.webp"
+                    alt="Team Koalas"
+                    class="w-full h-full"
+                />
+            </div>
+            <Process client:load />
         </div>
-        <Process client:load />
     </div>
 </section>
