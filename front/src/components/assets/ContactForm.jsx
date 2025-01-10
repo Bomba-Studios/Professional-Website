@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, onMount } from 'solid-js';
 import emailjs from '@emailjs/browser';
 import { toast } from 'solid-toast';
 
@@ -6,25 +6,32 @@ export default function ContactForm() {
     let formRef;
     const [isSending, setIsSending] = createSignal(false);
     const [formValid, setFormValid] = createSignal(false);
+    const [formSent, setFormSent] = createSignal(false);
+    const [isInitialized, setIsInitialized] = createSignal(false);
 
-    // Generar un número de solicitud único
+    onMount(() => {
+        const lastSent = localStorage.getItem('formLastSent');
+        if (lastSent && Date.now() - parseInt(lastSent) < 3600000) {
+            setFormSent(true);
+        }
+        setIsInitialized(true);
+    });
+
     const generateRequestNumber = () => {
-        return 'REQ-' + Date.now();  // Genera un número único basado en el timestamp
+        return 'REQ-' + Date.now();
     };
 
-    // Obtener la fecha actual
     const getCurrentDate = () => {
         const date = new Date();
-        return date.toISOString(); // Formato de fecha ISO
+        return date.toISOString();
     };
 
     const sendEmail = async (event) => {
         event.preventDefault();
         setIsSending(true);
 
-        // Agregar fecha y número de solicitud al formulario
-        formRef.request_number.value = generateRequestNumber();  // Número de solicitud
-        formRef.date.value = getCurrentDate(); // Fecha de envío
+        formRef.request_number.value = generateRequestNumber();
+        formRef.date.value = getCurrentDate();
 
         const promise = emailjs.sendForm(
             import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
@@ -49,8 +56,8 @@ export default function ContactForm() {
 
         try {
             await promise;
-            formRef.reset();
-            setFormValid(false);
+            localStorage.setItem('formLastSent', Date.now().toString());
+            setFormSent(true);
         } catch (error) {
             console.error('Error al enviar el correo:', error);
         } finally {
@@ -84,49 +91,75 @@ export default function ContactForm() {
     ];
 
     return (
-        <form
-            ref={(el) => (formRef = el)}
-            onSubmit={sendEmail}
-            method="POST"
-        >
-            <input type="hidden" name="date" />
-            <input type="hidden" name="request_number" />
+        <>
+            {!isInitialized() ? (
+                <div class="flex items-center justify-center h-full min-h-[400px] text-center">
+                    <p class="text-gray-500">Cargando...</p>
+                </div>
+            ) : formSent() ? (
+                <div class="flex flex-col items-center justify-center md:h-full md:min-h-[400px] text-center -mt-20 md:mt-0">
+                    <dotlottie-player
+                        src="https://lottie.host/9a6b7271-b40e-4742-818d-55de19c03c5e/A47zGNFGmI.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 300px; height: 300px"
+                        autoplay
+                    ></dotlottie-player>
+                    <p class="text-xl md:text-2xl leading-[1.1em] font-bold -mt-16 mb-16">
+                        ¡Mensaje enviado exitosamente! En breve nos contactaremos contigo.
+                    </p>
+                </div>
+            ) : (
+                <form
+                    ref={(el) => (formRef = el)}
+                    onSubmit={sendEmail}
+                    method="POST"
+                >
+                    <input type="hidden" name="date" />
+                    <input type="hidden" name="request_number" />
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {formFields.map((field, index) => (
-                    <div
-                        class={`${index === 2 ? 'sm:col-span-2' : ''}`}
-                        key={field.name}
-                    >
-                        <input
-                            type={field.type}
-                            name={field.name}
-                            id={field.name}
-                            required={field.required}
-                            placeholder={field.placeholder}
-                            class="form-input"
-                            onInput={handleInputChange}
-                        />
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {formFields.map((field, index) => (
+                            <div
+                                class={`${index === 2 ? 'sm:col-span-2' : ''}`}
+                                key={field.name}
+                            >
+                                <input
+                                    type={field.type}
+                                    name={field.name}
+                                    id={field.name}
+                                    required={field.required}
+                                    placeholder={field.placeholder}
+                                    class="form-input"
+                                    onInput={handleInputChange}
+                                />
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
-            <textarea
-                name="message"
-                placeholder="Cuéntanos sobre tu proyecto...*"
-                required
-                class="form-textarea-input mt-6"
-                onInput={handleInputChange}
-            ></textarea>
-            <button aria-label='Enviar Mensaje'
-                type="submit"
-                class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center mt-5
-                    ${isSending() || !formValid()
-                        ? 'btn-primary-disabled'
-                        : 'btn-primary'}`}
-                disabled={isSending() || !formValid()}
-            >
-                {isSending() ? 'Enviando...' : 'Enviar Mensaje →'}
-            </button>
-        </form>
+                    <textarea
+                        name="message"
+                        placeholder="Cuéntanos sobre tu proyecto...*"
+                        required
+                        class="form-textarea-input mt-6"
+                        onInput={handleInputChange}
+                    ></textarea>
+                    <button
+                        aria-label="Enviar Mensaje"
+                        type="submit"
+                        class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center mt-5 mb-5
+                            ${isSending() || !formValid()
+                                ? 'btn-primary-disabled'
+                                : 'btn-primary'}`}
+                        disabled={isSending() || !formValid()}
+                    >
+                        {isSending() ? 'Enviando...' : 'Enviar Mensaje →'}
+                    </button>
+                </form>
+            )}
+            <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+        </>
     );
 }
+
