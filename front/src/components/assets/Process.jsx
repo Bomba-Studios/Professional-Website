@@ -111,14 +111,14 @@ const Process = () => {
                 <div class="bg-white p-4 sm:p-6 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-gray-100">
                   <h3 class="text-lg sm:text-xl font-bold text-gray-900 leading-[1.1em]">{step.title}</h3>
                   <p class="text-sm sm:text-base text-gray-600 leading-[1.1em]">{step.description}</p>
-                  <a
+                  {/* <a
                     href={step.link}
                     data-scroll
                     class={`text-primary-600 leading-[1.1em] flex items-center ${step.modal ? 'mt-2' : 'hidden'}`}  
                   >
                     {step.linkText}
                     <ChevronRightIcon />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
