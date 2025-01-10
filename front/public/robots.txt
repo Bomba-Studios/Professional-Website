@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://koaladevs.pages.dev/sitemap-0.xml
+Sitemap: https://koala-devs.com/sitemap-index.xml
