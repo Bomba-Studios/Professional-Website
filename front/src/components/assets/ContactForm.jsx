@@ -88,7 +88,6 @@ export default function ContactForm() {
             ref={(el) => (formRef = el)}
             onSubmit={sendEmail}
             method="POST"
-            class="space-y-2 md:space-y-6"
         >
             <input type="hidden" name="date" />
             <input type="hidden" name="request_number" />
@@ -115,12 +114,12 @@ export default function ContactForm() {
                 name="message"
                 placeholder="Cuéntanos sobre tu proyecto...*"
                 required
-                class="form-textarea-input"
+                class="form-textarea-input mt-6"
                 onInput={handleInputChange}
             ></textarea>
             <button aria-label='Enviar Mensaje'
                 type="submit"
-                class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center
+                class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center mt-5
                     ${isSending() || !formValid()
                         ? 'btn-primary-disabled'
                         : 'btn-primary'}`}

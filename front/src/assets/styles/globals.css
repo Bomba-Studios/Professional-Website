@@ -124,7 +124,7 @@ details[open] summary .toggle-icon::after {
 }
 
 .form-textarea-input {
-  @apply w-full h-32 md:h-56 px-4 py-3 rounded-xl bg-gray-200 font-medium resize-none focus:outline-slate-300 leading-[1.1em] focus:bg-slate-200
+  @apply w-full h-32 md:h-72 px-4 py-3 rounded-xl bg-gray-200 font-medium resize-none focus:outline-slate-300 leading-[1.1em] focus:bg-slate-200
 }
 
 .form-textarea-input::placeholder {
