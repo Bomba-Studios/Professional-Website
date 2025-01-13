@@ -36,10 +36,10 @@ export const BurguerMenuIcon = () => (
 )
 export const TechIcon = () => (
     <svg
-        class="text-primary-600"
+        class="text-primary-600 stroke-2"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -60,8 +60,8 @@ export const SecurityIcon = () => (
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         stroke-width="2"
     >
         <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"></path>
@@ -77,8 +77,8 @@ export const DeliveryIcon = () => (
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         stroke-width="2"
     >
         <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
@@ -95,7 +95,7 @@ export const SupportIcon = () => (
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
-        width="24" height="24"
+        width="32" height="32"
         stroke-width="2">
         <path d="M8 21l8 0"></path>
         <path d="M12 17l0 4"></path>
