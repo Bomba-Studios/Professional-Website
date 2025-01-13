@@ -318,7 +318,7 @@ export const InstagramIcon = () => (
 
 export const MainLogoIcon = () => (
     <div class="flex items-center space-x-2 h-8" >
-        <img src="/koala.webp" alt="KoalaDevs | Diseño y desarrollo de páginas web en Bogotá" class="w-10 h-10" />
+        <img src="/koala.webp" alt="KoalaDevs" class="w-10 h-10" />
         <div class="flex flex-col">
             <span class="text-2xl md:text-3xl font-bold bg-clip-text text-primary-600">
                 KoalaDevs
