@@ -1,0 +1,43 @@
+---
+
+---
+
+<section class="py-20">
+    <div class="flex flex-col items-center justify-center">
+        <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold text-center ">¿Por qué tener una web en el <span class="gradient-text">2025?</span></h2>
+        <div class="flex">
+            <div class="bg-primary-600 mt-10 border-none p-10 rounded-2xl relative h-48">
+                <p class="text-white">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quas sed sunt facilis nulla similique rem architecto ut tempore? Sint!</p>
+                <div class="max-w-72 bg-slate-50 pt-3 pl-3 absolute bottom-0 right-0 rounded-tl-xl rounded-br-xl inverted-border-radius-left-bottom inverted-border-radius-right-top">
+                    <button class="py-1 px-2 bg-yellow-400 text-white rounded-2xl h-20 w-full ">Ver más</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+
+    .inverted-border-radius-left-bottom::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -40px;
+        height: 40px;
+        width: 40px;
+        border-bottom-right-radius: 40%;
+        box-shadow: 0 20px 0 0 #f8fafc;
+    }
+
+    .inverted-border-radius-right-top::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top:-40px;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-bottom-right-radius: 30%;
+        box-shadow: 0 12px 0 0 #f8fafc;
+    }
+</style>
