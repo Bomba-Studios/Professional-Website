@@ -146,7 +146,7 @@ export default function ContactForm() {
                     <button
                         aria-label="Enviar Mensaje"
                         type="submit"
-                        class={`py-4 px-12 flex mx-auto md:mx-0 md:items-center justify-center mt-5 mb-5
+                        class={`py-4 px-12 flex w-full mx-auto md:mx-0 md:items-center justify-center mt-5 mb-5
                             ${isSending() || !formValid()
                                 ? 'btn-primary-disabled'
                                 : 'btn-primary'}`}

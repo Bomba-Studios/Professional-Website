@@ -47,21 +47,20 @@ export const features = [
             </p>
         </div>
 
-        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {
                 features.map((feature) => (
-                    <div class="relative group bg-white p-4 rounded-xl shadow-md md:shadow-sm md:hover:shadow-lg transition-all duration-300">
-                        <div class="flex flex-col items-start">
-                            <div class="p-3 bg-primary-50 rounded-lg mb-4">
-                                <feature.icon />
-                            </div>
-                            <h3 class="text-lg sm:text-xl font-bold text-gray-900 leading-[1.1em]">
-                                {feature.title}
-                            </h3>
-                            <p class="text-sm sm:text-base text-gray-600 leading-[1.1em]">
-                                {feature.description}
-                            </p>
+                    <div class="bg-white p-4 md:p-6 rounded-xl flex flex-col items-start text-start transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-gray-100">
+                        <div class="p-2 bg-primary-50 mb-2 w-fit rounded-lg">
+                            {" "}
+                            <feature.icon />
                         </div>
+                        <h3 class="text-lg md:text-xl font-bold leading-[1.1em]">
+                            {feature.title}
+                        </h3>
+                        <p class="text-base md:text-lg mt-2 text-gray-600 leading-[1.1em]">
+                            {feature.description}
+                        </p>
                     </div>
                 ))
             }

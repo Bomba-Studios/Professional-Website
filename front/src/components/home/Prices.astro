@@ -1,8 +1,11 @@
 ---
 import {
+    CampaignIcon,
     CheckIcon,
+    InfoIcon,
     LinkIcon,
     LogoIcon,
+    RefreshIcon,
     UserIcon,
     WorldIcon,
 } from "../assets/Icons";
@@ -48,13 +51,52 @@ const pricingPlans = [
         description: "Muestra tu trabajo al mundo",
         demoUrl: "https://demo-portfolio-d1t.pages.dev/",
     },
+    {
+        title: "Rediseño de Sitio Web",
+        price: "450.000",
+        icon: RefreshIcon,
+        features: [
+            "Análisis del sitio actual",
+            "Actualización de diseño",
+            "Optimización técnica",
+            "Mejoras en funcionalidad",
+        ],
+        description: "Renueva tu sitio para destacar en la web",
+        demoUrl: "#",
+    },
+    {
+        title: "Web Informativa",
+        price: "550.000",
+        icon: InfoIcon,
+        features: [
+            "Diseño moderno y profesional",
+            "Sección de servicios",
+            "Información de contacto",
+            "Optimización básica para SEO",
+        ],
+        description: "Ideal para negocios que ofrecen servicios.",
+        demoUrl: "#",
+    },
+    {
+        title: "Web para Publicidades",
+        price: "450.000",
+        icon: CampaignIcon,
+        features: [
+            "Diseño atractivo para captar leads",
+            "Optimización para campañas",
+            "Botones de acción (CTAs) visibles",
+            "Integración con analíticas",
+        ],
+        description: "Maximiza los resultados de tus campañas.",
+        demoUrl: "#",
+    },
 ];
 ---
 
 <section class="bg-slate-100 py-20" id="pricing">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 md:mb-20">
-            <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold">
+    <div class="container mx-auto sm:px-6 lg:px-8">
+        <div class="text-center mb-8 md:mb-10 container mx-auto">
+            <h2 class="px-4 text-3xl md:text-5xl leading-[1.1em] font-bold">
                 Tu web, tu plan, <span class="gradient-text">tu manera</span>
             </h2>
             <p class="mt-4 text-xl md:text-2xl text-gray-600 leading-[1.1em]">
@@ -63,88 +105,160 @@ const pricingPlans = [
             </p>
         </div>
 
-        <div class="hidden md:grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-            {
-                pricingPlans.map((plan) => (
+        <div class="hidden md:block">
+            <div
+                data-hs-carousel='{
+        "loadingClasses": "opacity-0",
+        "dotsItemClasses": "hs-carousel-active:bg-primary-600 hs-carousel-active:border-primary-700 size-3 border rounded-full border-slate-500",
+        "slidesQty": {
+            "xs": 1,
+            "sm": 2,
+            "md": 2,
+            "lg": 3,
+            "xl": 4
+            }
+        }'
+                class="relative"
+            >
+                <div class="hs-carousel relative overflow-hidden min-h-[450px]">
                     <div
-                        class={`relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${
-                            plan.popular
-                                ? "ring-2 ring-primary-500 md:scale-110"
-                                : ""
-                        }`}
+                        class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 transition-transform duration-700"
                     >
-                        {plan.popular && (
-                            <div class="absolute top-0 right-0 bg-primary-500 text-gray-100 text-xs font-bold px-3 py-1 rounded-bl-lg leading-[1.1em]">
-                                Popular
-                            </div>
-                        )}
-
-                        <div class="p-6">
-                            <div class="flex items-center space-x-3 mb-4">
-                                <div class="p-2 bg-primary-100 rounded-lg">
-                                    <plan.icon />
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 leading-[1.1em]">
-                                    {plan.title}
-                                </h3>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="flex items-baseline">
-                                    <span class="text-sm text-gray-500 font-medium leading-[1.1em]">
-                                        Desde
-                                    </span>
-                                    <span class="ml-2 text-2xl font-bold text-gray-900 leading-[1.1em]">
-                                        $
-                                    </span>
-                                    <span class="text-3xl font-bold text-gray-900 leading-[1.1em]">
-                                        {plan.price}
-                                    </span>
-                                    <span class="ml-1 text-gray-500 leading-[1.1em]">
-                                        COP
-                                    </span>
-                                </div>
-                                <p class="text-sm text-gray-600 mt-1 leading-[1.1em]">
-                                    {plan.description}
-                                </p>
-                            </div>
-
-                            <ul class="space-y-2 mb-6">
-                                {plan.features.map((feature, index) => (
-                                    <li class="flex items-center text-sm gap-1.5">
-                                        <CheckIcon />
-                                        <span class="text-gray-600 leading-[1.1em]">
-                                            {feature}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div class="grid grid-cols-1 gap-3">
-                                <a
-                                    href="#contact-us"
-                                    data-scroll
-                                    class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 leading-[1.1em] ${
+                        {
+                            pricingPlans.map((plan) => (
+                                <div
+                                    class={`my-2 mx-2 hs-carousel-slide relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${
                                         plan.popular
-                                            ? "bg-primary-600 text-white hover:bg-primary-700"
-                                            : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                                            ? "ring-2 ring-primary-700"
+                                            : ""
                                     }`}
                                 >
-                                    Comenzar
-                                </a>
-                                {/* <a
-                                    href={plan.demoUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="flex items-center justify-center py-2 px-4 rounded-lg font-medium border border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-colors duration-300"
-                                >
-                                    Ver Demo <LinkIcon />
-                                </a> */}
-                            </div>
-                        </div>
+                                    {plan.popular && (
+                                        <div class="absolute top-0 right-0 bg-primary-700 text-gray-50 text-xs font-bold px-3 py-1 rounded-bl-lg leading-[1.1em]">
+                                            Popular
+                                        </div>
+                                    )}
+
+                                    <div class="p-6">
+                                        <div class="flex items-center space-x-3 mb-4">
+                                            <div class="p-2 bg-primary-100 rounded-lg">
+                                                <plan.icon />
+                                            </div>
+                                            <h3 class="text-xl font-bold text-gray-900 leading-[1.1em]">
+                                                {plan.title}
+                                            </h3>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <div class="flex items-baseline">
+                                                <span class="text-sm text-gray-500 font-medium leading-[1.1em]">
+                                                    Desde
+                                                </span>
+                                                <span class="ml-2 text-2xl font-bold text-gray-900 leading-[1.1em]">
+                                                    $
+                                                </span>
+                                                <span class="text-3xl font-bold text-gray-900 leading-[1.1em]">
+                                                    {plan.price}
+                                                </span>
+                                                <span class="ml-1 text-gray-500 leading-[1.1em]">
+                                                    COP
+                                                </span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 mt-1 leading-[1.1em]">
+                                                {plan.description}
+                                            </p>
+                                        </div>
+
+                                        <ul class="space-y-2 mb-6">
+                                            {plan.features.map(
+                                                (feature, index) => (
+                                                    <li class="flex items-center text-sm gap-1.5">
+                                                        <CheckIcon />
+                                                        <span class="text-gray-600 leading-[1.1em]">
+                                                            {feature}
+                                                        </span>
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+
+                                        <div class="grid grid-cols-1 gap-3">
+                                            <a
+                                                href="#contact-us"
+                                                data-scroll
+                                                class={`text-center py-2 px-4 rounded-lg font-medium transition-colors duration-300 leading-[1.1em] ${
+                                                    plan.popular
+                                                        ? "bg-primary-600 text-white hover:bg-primary-700"
+                                                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                                                }`}
+                                            >
+                                                Comenzar
+                                            </a>
+                                            <a
+                                                href={plan.demoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex items-center justify-center py-2 px-4 rounded-lg font-medium border border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-colors duration-300"
+                                            >
+                                                Ver Demo <LinkIcon />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
-                ))
-            }
+                </div>
+                <button
+                    type="button"
+                    class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg"
+                >
+                    <span class="text-2xl" aria-hidden="true">
+                        <svg
+                            class="shrink-0 size-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button
+                    type="button"
+                    class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg"
+                >
+                    <span class="sr-only">Next</span>
+                    <span class="text-2xl" aria-hidden="true">
+                        <svg
+                            class="shrink-0 size-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <div
+                    class="hs-carousel-pagination flex justify-center absolute -bottom-5 start-0 end-0 space-x-2"
+                >
+                </div>
+            </div>
         </div>
 
         <div class="md:hidden">
@@ -248,7 +362,7 @@ const pricingPlans = [
 
                 <button
                     type="button"
-                    class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                    class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg"
                 >
                     <span class="text-2xl" aria-hidden="true">
                         <svg
@@ -270,7 +384,7 @@ const pricingPlans = [
                 </button>
                 <button
                     type="button"
-                    class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                    class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg"
                 >
                     <span class="sr-only">Next</span>
                     <span class="text-2xl" aria-hidden="true">
@@ -298,6 +412,6 @@ const pricingPlans = [
             </div>
         </div>
     </div>
-</section>
 
-<script src="../../../node_modules/preline/dist/preline"></script>
+    <script src="../../../node_modules/preline/dist/preline"></script>
+</section>

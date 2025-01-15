@@ -31,7 +31,7 @@ const footerSections = [
 ---
 
 <footer class="bg-gray-900">
-    <div class="container mx-auto py-12 px-4 sm:px-6 md:py-12 md:px-2">
+    <div class="container mx-auto py-12 px-4 xl:py-12 xl:px-2">
         <div class="pb-8 border-b border-gray-700">
             <div class="lg:grid lg:grid-cols-3 lg:gap-8">
                 <div>
@@ -40,7 +40,7 @@ const footerSections = [
                         <div class="flex flex-col -space-y-2">
                             <a href="#hero" data-scroll>
                                 <span
-                                    class="text-2xl md:text-4xl font-bold bg-clip-text text-white"
+                                    class="text-2xl lg:text-4xl font-bold bg-clip-text text-white"
                                 >
                                     KoalaDevs
                                 </span>
@@ -53,15 +53,15 @@ const footerSections = [
                         calidad para tu negocio.
                     </p>
                 </div>
-                <div class="hidden md:block mt-12 lg:mt-0 md:col-span-2">
-                    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3">
+                <div class="hidden lg:block mt-12 lg:mt-0 lg:col-span-2">
+                    <div class="grid grid-cols-3 lg:grid-cols-4 md:grid-cols-3">
                         {
                             footerSections.map((section) => (
                                 <div>
                                     <span class="text-sm font-semibold text-gray-400 tracking-wider capitalize">
                                         {section.title}
                                     </span>
-                                    <ul class="mt-4 md:space-y-4 hidden md:block">
+                                    <ul class="mt-4 lg:space-y-4 hidden lg:block">
                                         {section.links.map((link) => (
                                             <li>
                                                 <a

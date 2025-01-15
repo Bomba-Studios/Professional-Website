@@ -3,7 +3,7 @@ import { CleanCodeIcon } from "../assets/Icons";
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center">
-    <div class="absolute inset-0 overflow-hidden md:overflow-visible">
+    <div class="absolute inset-0 overflow-hidden">
         <div
             class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary-400/30 to-primary-400/30 rounded-full blur-3xl"
         >
@@ -16,10 +16,10 @@ import { CleanCodeIcon } from "../assets/Icons";
 
     <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 items-center">
-            <div class="space-y-8 text-left">
+            <div class="md:mt-8 space-y-8 text-left md:text-center lg:text-left">
                 <div class="space-y-4">
                     <h1
-                        class="text-[46px] md:text-[3.5vw] leading-[1.1em] font-bold"
+                        class="text-[46px] xl:text-[3.5vw] leading-[1.1em] font-bold"
                     >
                         En <span class="text-primary-600"> KoalaDevs </span>
                         Transformamos Ideas en
@@ -33,7 +33,7 @@ import { CleanCodeIcon } from "../assets/Icons";
                     <a
                         href="#pricing"
                         data-scroll
-                        class="btn-primary md:w-fit gap-1 w-full"
+                        class="btn-primary lg:w-fit gap-1 w-full"
                     >
                         Cotiza tu página web <span class="animate-bounce mt-1"
                         ></span>
@@ -48,7 +48,7 @@ import { CleanCodeIcon } from "../assets/Icons";
                 </div>
             </div>
 
-            <div class="hidden relative lg:block">
+            <div class="hidden relative md:block lg:block mt-8">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-primary-600/10 to-purple-600/10"

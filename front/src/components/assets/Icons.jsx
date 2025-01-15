@@ -365,6 +365,38 @@ export const UserIcon = () => (
     </svg>
 );
 
+export const RefreshIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg"
+        class="text-primary-600 stroke-2"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5"></path>
+        <path d="M5.63 7.16l0 .01"></path>
+        <path d="M4.06 11l0 .01"></path>
+        <path d="M4.63 15.1l0 .01"></path>
+        <path d="M7.16 18.37l0 .01"></path>
+        <path d="M11 19.94l0 .01"></path>
+    </svg>
+);
+
+export const InfoIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg"
+        class="text-primary-600 stroke-2"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 9h.01"></path>
+        <path d="M11 12h1v4h1"></path>
+    </svg>
+);
+
+export const CampaignIcon = () => (
+    <svg class="text-primary-600 stroke-2"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="2">
+        <path d="M10 9m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v9.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z"></path>
+        <path d="M17 3m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v15.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z"></path>
+        <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+    </svg>
+);
+
 export const WorldIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg"
         class="text-primary-600 stroke-2"

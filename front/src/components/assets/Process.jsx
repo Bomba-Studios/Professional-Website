@@ -110,7 +110,7 @@ const Process = () => {
                   class={`lg:w-full ${step.number % 2 === 0 ? 'lg:order-1 lg:pr-16' : 'lg:order-2 lg:pl-16'
                     }`}
                 >
-                  <div class="bg-white p-4 sm:p-6 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.08)] transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-gray-100">
+                  <div class="bg-white p-4 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.08)] transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] border border-gray-100">
                     <h3 class="text-lg sm:text-xl font-bold text-gray-900 leading-[1.1em]">{step.title}</h3>
                     <p class="text-sm sm:text-base text-gray-600 leading-[1.1em]">{step.description}</p>
                     <button
