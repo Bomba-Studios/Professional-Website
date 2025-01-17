@@ -400,3 +400,43 @@ export const ChevronRightIcon = () => (
         <path d="M9 6l6 6l-6 6"></path>
     </svg>
 );
+
+export const TrustIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+        <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+        <path d="M12.5 15.5l2 2" />
+        <path d="M15 13l2 2" />
+    </svg>
+)
+
+export const TwentyFourIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M4 13c.325 2.532 1.881 4.781 4 6" />
+        <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2" />
+        <path d="M4 5v4h4" />
+        <path d="M12 15h2a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-1a1 1 0 0 0 -1 1v1a1 1 0 0 0 1 1h2" />
+        <path d="M18 15v2a1 1 0 0 0 1 1h1" />
+        <path d="M21 15v6" />
+    </svg>
+)

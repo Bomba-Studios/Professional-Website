@@ -1,18 +1,51 @@
 ---
-
+import { TrustIcon, TwentyFourIcon } from "../assets/Icons"
 ---
 
-<section class="py-20">
-    <div class="flex flex-col items-center justify-center">
-        <h2 class="text-3xl md:text-5xl leading-[1.1em] font-bold text-center ">¿Por qué tener una web en el <span class="gradient-text">2025?</span></h2>
-        <div class="flex">
-            <div class="bg-primary-600 mt-10 border-none p-10 rounded-2xl relative h-48">
-                <p class="text-white">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quas sed sunt facilis nulla similique rem architecto ut tempore? Sint!</p>
-                <div class="max-w-72 bg-slate-50 pt-3 pl-3 absolute bottom-0 right-0 rounded-tl-xl rounded-br-xl inverted-border-radius-left-bottom inverted-border-radius-right-top">
-                    <button class="py-1 px-2 bg-yellow-400 text-white rounded-2xl h-20 w-full ">Ver más</button>
+<section class="py-20 bg-slate-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-20">
+            <div class="flex flex-col justify-center lg:flex-row lg:justify-between gap-5">
+                <h2 class="text-3xl lg:text-5xl leading-[1.1em] font-bold">¿Por qué tener <br> <p class="lg:ml-14"> una web en el <span class="text-primary-600">2025?</span></p></h2>
+                <p class="lg:w-[45%] text-xl lg:text-2xl text-gray-600 leading-[1.1em] text-right">En un mundo donde la mayoría de las decisiones comienzan online, tener una web en 2025 es la mejor forma de asegurar tu presencia y relevancia.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-5 lg:mx-20">
+                <div class="bg-white min-h-48 rounded-2xl lg:w-96 h-64 flex flex-col justify-between">
+                    <div class="flex flex-col p-10 pb-0 gap-5">
+                        <span class="text-lg md:text-xl leading-[1.1em] font-bold">Confianza y Credibilidad</span>
+                        <p class="text-gray-600 text-base md:text-lg leading-[1.1em]">
+                            Genera confianza en tus clientes al mostrar información clara, reseñas y la seriedad de tu negocio.
+                        </p>
+                    </div>
+                    <div class="flex justify-end p-10 pt-0">
+                        <TrustIcon />
+                    </div>
+                </div>
+                <div class="bg-white min-h-48 rounded-2xl lg:w-96 h-64">
+                    <div class="flex flex-col p-10 pb-0 gap-5">
+                        <span class="text-lg md:text-xl leading-[1.1em] font-bold">Disponibilidad 24/7</span>
+                        <p class="text-gray-600 text-base md:text-lg leading-[1.1em]">
+                            Tu web trabaja por ti todo el tiempo, permitiendo que los clientes te encuentren y realicen consultas o compras en cualquier momento.
+                        </p>
+                    </div>
+                    <div class="flex justify-end p-10 pt-0">
+                        <TwentyFourIcon/>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center rounded-2xl">
+                    <div class="bg-white border-none p-10 rounded-2xl relative lg:w-96 h-72 lg:h-64">
+                        <div class="flex flex-col gap-5">
+                            <span class="text-lg md:text-xl leading-[1.1em] font-bold">Destaca frente a la competencia</span>
+                            <p class="text-gray-600 leading-[1.1em] text-base md:text-lg">
+                                Una página web bien diseñada te diferencia y posiciona como una opción más atractiva y moderna en tu sector.
+                            </p>
+                        </div>
+                        <div class="lg:max-w-72 bg-slate-200 pt-3 pl-3 absolute bottom-0 right-0 rounded-tl-xl rounded-br-xl inverted-border-radius-left-bottom inverted-border-radius-right-top">
+                            <a href="#contact-us" class="bg-white text-black rounded-2xl h-14 w-44 hover:shadow-xl hover:translate-x-1 transition ease-in-out delay-50 flex items-center justify-center">¿Quieres conocer?</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -26,7 +59,7 @@
         height: 40px;
         width: 40px;
         border-bottom-right-radius: 40%;
-        box-shadow: 0 20px 0 0 #f8fafc;
+        box-shadow: 0 20px 0 0 #e2e8f0;
     }
 
     .inverted-border-radius-right-top::after{
@@ -38,6 +71,6 @@
         height: 40px;
         width: 40px;
         border-bottom-right-radius: 30%;
-        box-shadow: 0 12px 0 0 #f8fafc;
+        box-shadow: 0 12px 0 0 #e2e8f0;
     }
 </style>
